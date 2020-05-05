@@ -1,0 +1,22 @@
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-side {
+    display: flex;
+}
+
+.right-side {
+    display: flex;
+}
+
+.nav-links {
+    margin-right: 25px;
+    font-size: 1em;
+    text-transform: uppercase;
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom;
+}
