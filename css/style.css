@@ -1,7 +1,45 @@
+:root {
+    --main-font: 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+    background-color: rgba(15, 14, 14, 0.3);
+    font-family: Orbitron;
+}
+
+.nav-links a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: medium;
+    padding: 100% 2px;
+}
+
+.nav-links a:hover {
+    background-color: #FCEC52;
+    color: #12263A;
+}
+
+.nav-links h2 {
+    margin-top: -10px;
+    font-family: Parisienne;
+    text-align: center;
+    font-size: xx-large;
+    font-style: italic;
+    font-weight: bolder;
+    color: #FCEC52;
 }
 
 .left-side {
@@ -19,4 +57,394 @@
     height: 22px;
     border-bottom: 1px solid transparent;
     transition: border-bottom;
+}
+
+.presentation-wrapper {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+}
+
+.bkg-images {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.bkg-images figure {
+    position: relative;
+    width: 400%;
+    height: 100%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+.bkg-images figure img {
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+@keyframes slider {
+    0% {left: 0;}
+    33% {left: -100%;}
+    66% {left: -200%;}
+    100% {left: -300%;}
+}
+
+.presentation-text {
+    padding-top: 150px;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    margin: auto;
+    text-align: center;
+}
+
+.presentation-text h1 {
+    margin: 0;
+    font-family: Parisienne;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 90px;
+    color: #FCEC52;
+    text-shadow: 5px 5px 10px black;
+}
+
+.presentation-text h3 {
+    font-family: Orbitron;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-shadow: 5px 5px 10px black;
+    margin-bottom: 60px;
+}
+
+.presentation-text a {
+    margin-top: 20px;
+    background-color: #12263A;
+    font-family: Orbitron;
+    font-size: 20px;
+    color: #06BCC1;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 37px;
+}
+
+.presentation-text a:hover {
+    background-color: #06BCC1;
+    color: #12263A;
+}
+
+.contact-form-wrapper {
+    position: absolute;
+    background-image: url("../images/bkg-contact.jpg");
+    width: 100%;
+    height: fit-content;
+    background-size: cover;
+    z-index: 1;
+    top: 0;
+    background-attachment: fixed;
+    padding: 5em 0 1em;
+}
+
+.about-us, .contact-data, .contact-form {
+    width: 90%;
+    position: relative;
+    background-color: rgba(18, 38, 58, 0.7);
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    padding: 1.5em 1em;
+    color: white;
+    font-family: Carrois Gothic;
+}
+
+.about-us a {
+    margin-top: 30px;
+    background-color: #12263A;
+    font-family: Orbitron;
+    font-size: 15px;
+    color: #06BCC1;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 37px;
+}
+
+.about-us a:hover {
+    background-color: #06BCC1;
+    color: #12263A;
+}
+
+
+
+.form-control {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 16px;
+    background: transparent;
+}
+
+input {
+    height: 45px;
+}
+
+
+form .submit{
+    width: auto;
+    margin-top: 20px;
+    background-color: #12263A;
+    font-family: Orbitron;
+    font-size: 20px;
+    color: #06BCC1;
+    text-transform: uppercase;
+    border-radius: 37px;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    border: 0;
+    outline: none
+}
+
+form .submit:hover {
+    background-color: #06BCC1;
+    color: #12263A;
+}
+
+
+/* LOG IN */
+
+.login-wrapper {
+    text-align: center;
+    position: absolute;
+    background-image: url("../images/bkg-login.jpg");
+    width: 100%;
+    height: fit-content;
+    background-size: cover;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    background-attachment: fixed;
+    padding: 5em 0 1em;
+}
+
+.login-wrapper h1 {
+    margin: 10px auto;
+    font-family: Parisienne;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 90px;
+    color: #FCEC52;
+    text-shadow: 5px 5px 10px black;
+}
+
+.form-box, .form-box-reg {
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    margin: 0, auto;
+    height: 370px;
+    position: relative;
+    background-color: rgba(18, 38, 58, 0.7);
+    padding: 5px;
+    overflow: hidden;
+}
+
+.input {
+    position: absolute;
+    width:280px;
+}
+
+.infield {
+    font-family: Orbitron;
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background-color: #06BCC1;
+    font-family: Orbitron;
+    font-size: 20px;
+    color: #12263A;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.check-box {
+    margin: 30px 10px 30px 0;
+}
+
+span {
+    font-family: Orbitron;
+    color: white;
+    font-size: 9px;
+    bottom: 155px;
+    position: absolute;
+}
+
+#login, #register {
+    margin: 0px 25%;
+    position: absolute;
+}
+
+.cancel-btn {
+    width: 178px;
+    height: 24.667px;
+    padding: 10px 30px;
+    display: block;
+    margin: 10px auto;
+    background-color: red;
+    font-family: Orbitron;
+    font-size: 20px;
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*REGISTRATION PAGE*/
+
+.form-box-reg {
+    margin-bottom: 10px;
+    height: 590px;
+}
+
+/*RENT A CAR*/
+
+.rentacar-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    background-image: url(../images/bkg-rentacar1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5em 0;
+}
+
+.search-filter, .options-filter, .cars-wrapper{
+    width: 90%;
+    margin: 20px auto;
+    background-color: rgba(18, 38, 58, 0.7);
+    text-align: center;
+    padding: 1em;
+}
+
+.search-field {
+    font-family: Orbitron;
+    margin: 0 10px;
+    height: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+
+}
+
+.location {
+    width: 300px;
+}
+
+.date {
+    width: auto;
+}
+
+.search-btn {
+    font-family: Orbitron;
+    font-weight: bold;
+    height: 60px;
+    width: 150px;
+    border-radius: 25px;
+    background-color: #06BCC1;
+    color: rgb(18, 38, 58);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+
+.search-btn:hover {
+    background-color: #12263A;
+    color: #06BCC1;
+}
+
+.options-filter {
+    display: flex;
+}
+
+.sort {
+    color: white;
+    font-family: Orbitron;
+    width: 100%;
+    display: flex;
+}
+
+.car-sort {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    height: 30px;
+    background-color: #06BCC1;
+    color: #FCEC52;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+}
+
+.cars-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.car-card {
+    padding: 5%;
+    flex-grow: 1;
+    flex-basis: 20%;
+    font-family: Orbitron;
+    color: #fff;
+    display: flex; /* so child elements can use flexbox stuff too! */
+    flex-direction: column;
+}
+
+.car-image img {
+    background-color: rgb(18, 38, 58);
+    max-width: 100%;
+}
+
+.car-info {
+    text-align: center;
+    margin-top: auto;
 }
